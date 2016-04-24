@@ -10,6 +10,7 @@ public class Polynomial {
 		ArrayList<Term> reverse;
 		String polynomialString;
 		String reversePolynomial = "";
+		String product = "";
 	
 	public Polynomial(){
 		polynomial = new ArrayList<Term>();
@@ -74,7 +75,7 @@ public class Polynomial {
 		
 		for (int i = 1; i < polynomial.size(); i++){
 			String x = polynomial.get(i).toString();
-			System.out.println(x);
+			
 			if (x != null){
 				this.reversePolynomial = x + " + " + reversePolynomial; 
 	//			reverse.add(i, polynomial.get(i));
@@ -83,6 +84,17 @@ public class Polynomial {
 		}
 		this.reversePolynomial = reversePolynomial + polynomial.get(0).toString();
 		System.out.println("reverse polynomial: " + reversePolynomial);
+	}
+	
+	public String productOfTerms(){
+		int productOfCo = 1, productOfExp= 0;
+		for(int i = 0; i < polynomial.size(); i++){
+			productOfCo = productOfCo * polynomial.get(i).getCoefficient();
+			productOfExp += polynomial.get(i).getExponent();
+			
+		}
+		return Integer.toString(productOfCo) + "x^" + Integer.toString(productOfExp);
+//		System.out.println(product);
 	}
 	
 	

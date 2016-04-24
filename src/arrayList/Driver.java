@@ -33,11 +33,25 @@ public class Driver {
 					poly1.insert(term2);
 					poly1.insert(term3);
 					
+					//deleting the term
 					poly1.delete(term2);
-					poly1.reverse();
-					poly1.product(3);
 					
+					//reversing the polynomial and printing 
+					poly1.reverse();
+					
+					//did this due to misunderstanding of the question
+					//takes the value of x as input to give the total value of the polynomial
+					System.out.println("product using the value of X: " + poly1.product(3));
+					
+					//finding the product of the terms
+					//did this also due to misunderstanding 
+					System.out.println("Products of the terms (multiplying the cof and adding exponents): " + poly1.productOfTerms());
+					
+					//printing the polynomial is normal order
+					//I think this is the calls the method which was meant to be product
 					String a = poly1.getPolynomial();
-					System.out.println(a);
+					System.out.println("Polynomial " + a);
+					
+					
 	}
 }
