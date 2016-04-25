@@ -12,9 +12,15 @@ public class Polynomial {
 		String reversePolynomial = "";
 		String product = "";
 	
+	//constructor
 	public Polynomial(){
 		polynomial = new ArrayList<Term>();
 	}
+	
+	/**
+	 * adding the Term to the polynomial in sorted order
+	 * @param a
+	 */
 	
 	public void insert (Term a){
 		int exp;
@@ -40,6 +46,11 @@ public class Polynomial {
 		
 	}
 	
+	/**
+	 * returns the whole polynomial expression
+	 * @return
+	 */
+	
 	public String getPolynomial (){
 		this.polynomialString = polynomial.get(0).toString();
 		for(int i = 1; i < polynomial.size(); i++){
@@ -48,6 +59,11 @@ public class Polynomial {
 		}
 		return polynomialString;
 	}
+	
+	/**
+	 * deleting a specific term
+	 * @param a
+	 */
 	
 	public void delete (Term a){
 		int exp, cof;
@@ -60,6 +76,10 @@ public class Polynomial {
 		}
 	}
 	
+	/**
+	 * finding the product with a value of a
+	 * @param x
+	 */
 	public int product (int x){
 		int total = 0;
 		for(int i = 0; i < polynomial.size(); i++){
@@ -69,6 +89,10 @@ public class Polynomial {
 		}
 		return total;
 	}
+	
+	/**
+	 * prints the polynomial in reverse order
+	 */
 	
 	public void reverse (){
 		
@@ -83,8 +107,13 @@ public class Polynomial {
 			}
 		}
 		this.reversePolynomial = reversePolynomial + polynomial.get(0).toString();
-		System.out.println("reverse polynomial: " + reversePolynomial);
+		System.out.println("Printing the reverse polynomial: " + reversePolynomial + "\n");
 	}
+	
+	/**
+	 * find the products of the terms
+	 * @return 
+	 */
 	
 	public String productOfTerms(){
 		int productOfCo = 1, productOfExp= 0;
