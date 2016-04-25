@@ -67,11 +67,18 @@ public class Driver {
 					Term term1 = new Term(11,3);
 					poly1.insert(term1);
 					
+					Term term2 = new Term(3,14);
+					poly1.insert(term2);
+					
+					Term term3 = new Term(16,5);
+					poly1.insert(term3);
+					
 					String a = poly1.getPolynomial();
 					System.out.println("Polynomial after adding 11,3 3,14 and 16,5 manually:  " + a + "\n");
-									
+					
+					
 					//deleting the term
-					poly1.delete(term1);
+					poly1.delete(term2);
 					
 					a = poly1.getPolynomial();
 					System.out.println("Polynomial after deleting 3,14:  " + a + "\n");
